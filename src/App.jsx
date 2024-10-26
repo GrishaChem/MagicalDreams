@@ -49,7 +49,7 @@ const App = () => {
             element={
               <RestrictedRoute
                 component={<RegistrationPage />}
-                redirectTo={"/contacts"}
+                redirectTo={"/dreamList"}
               />
             }
           />
@@ -58,7 +58,7 @@ const App = () => {
             element={
               <RestrictedRoute
                 component={<LoginPage />}
-                redirectTo={"/contacts"}
+                redirectTo={"/dreamList"}
               />
             }
           />
