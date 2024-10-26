@@ -36,7 +36,7 @@ const App = () => {
   }, [dispatch]);
 
   if (!isRefreshing) {
-    return <div>Loading...</div>; // Умовний рендеринг, поки триває оновлення
+    return <div>Loading...</div>;
   }
 
   return (
