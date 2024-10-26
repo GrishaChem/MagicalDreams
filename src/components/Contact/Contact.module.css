@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.liI{
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    padding: 8px 0px;
+    position: relative;
+    padding: 10px 8px;
+    gap: 8px;
+    flex-direction: row;
+    width: 300px;
+    margin-top: 16px;
+  justify-content: space-between;
+}
+
+.container{
+}
+
+/* button{
+   
+    
+} */
+
+.data{
+}
+
+.button{
+    
+  border: none;
+    padding: 12px 15px;
+    background-color: lightblue;
+    border-radius: 8px;
+    transition: all .4s ease;
+    font-weight: bold;
+    &:hover{
+      background-color: rgb(100, 157, 176);
+      cursor: pointer;
+      
+    }
+  }
