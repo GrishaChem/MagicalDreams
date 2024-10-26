@@ -8,6 +8,7 @@ const initialState = {
     },
     token: '',
     isLoggedIn: false,
+    isRefreshing: false,
     
 };
 
@@ -29,6 +30,12 @@ const slice = createSlice({
                 state.user.name = action.payload.name;
                 state.isLoggedIn = true;
             })
+            .addCase(refresh.pending, (state) => {
+                state.isRefreshing = true;
+            })
+            .addCase(refresh.rejected, (state) => {
+                state.isRefreshing = false; 
+            });
      }
 })
 
