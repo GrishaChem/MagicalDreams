@@ -11,7 +11,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
-    <div className="flex justify-between items-center p-4 bg-gray-800 text-white">
+    <div className="flex justify-between items-center p-4 bg-gray-800 text-white fixed top-0 w-full left-0 z-10">
       <NavLink to="/" className="text-xl font-semibold">
         Home
       </NavLink>
@@ -22,8 +22,8 @@ const Header = () => {
       )}
       <ul className="flex space-x-4 ">
         <li>
-          <NavLink to="/contacts" className="hover:text-gray-400 transition">
-            Contacts
+          <NavLink to="/dreamList" className="hover:text-gray-400 transition">
+            Dream-List
           </NavLink>
         </li>
         {!isLoggedIn && (

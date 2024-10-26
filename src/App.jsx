@@ -39,7 +39,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route
-            path="contacts"
+            path="dreamList"
             element={
               <PrivateRoute component={<ContactsPage />} redirectTo="/login" />
             }

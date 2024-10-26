@@ -10,8 +10,10 @@ const SearchBox = () => {
     <div>
       <p>Find contacts by name</p>
       <input
+        className="input input-bordered input-sm"
         type="text"
         name=""
+        placeholder="Find by name"
         id=""
         value={filter}
         onChange={(e) => dispatch(changeFilter(e.target.value))}

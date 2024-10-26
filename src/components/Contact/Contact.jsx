@@ -13,7 +13,7 @@ const Contact = ({ name, number, contact }) => {
       </div>
 
       <button
-        className={s.button}
+        className="btn btn-primary"
         onClick={() => dispatch(deleteContact(contact))}
       >
         Delete
