@@ -7,13 +7,13 @@ const SearchBox = () => {
   const dispatch = useDispatch();
   const filter = useSelector(selectFilter);
   return (
-    <div>
-      <p>Find by name</p>
+    <div className="mb-4">
+      <p>Find by headline</p>
       <input
         className="input input-bordered input-sm"
         type="text"
-        name=""
-        placeholder="Find by name"
+        name="headline"
+        placeholder="Find by headline"
         id=""
         value={filter}
         onChange={(e) => dispatch(changeFilter(e.target.value))}

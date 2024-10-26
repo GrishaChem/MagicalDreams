@@ -55,6 +55,7 @@ const RegistrationPage = () => {
                   name="email"
                   type="email"
                   placeholder="email"
+                  autoComplete="username"
                   className="input input-bordered"
                   required
                 />
@@ -67,6 +68,7 @@ const RegistrationPage = () => {
                   name="password"
                   type="password"
                   placeholder="password"
+                  autoComplete="new-password"
                   className="input input-bordered"
                   required
                 />

@@ -44,6 +44,7 @@ const LoginPage = () => {
                   name="email"
                   type="email"
                   placeholder="email"
+                  autoComplete="current-password"
                   className="input input-bordered"
                   required
                 />
@@ -56,6 +57,7 @@ const LoginPage = () => {
                   name="password"
                   type="password"
                   placeholder="password"
+                  autoComplete="current-password"
                   className="input input-bordered"
                   required
                 />
