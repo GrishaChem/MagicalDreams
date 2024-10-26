@@ -21,7 +21,7 @@ const ContactForm = () => {
       .required("Name is required"),
     number: Yup.string()
       .min(3, "Number must be at least 3 characters")
-      .max(50, "Number must be at most 50 characters")
+      .max(250, "Number must be at most 250 characters")
       .required("Number is required"),
   });
 

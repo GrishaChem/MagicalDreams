@@ -6,10 +6,10 @@ import { deleteContact } from "../../redux/contacts/operations.js";
 const Contact = ({ name, number, contact }) => {
   const dispatch = useDispatch();
   return (
-    <div className={s.liI}>
-      <div className={s.data}>
-        <p>{name}</p>
-        <p>{number}</p>
+    <div className="flex items-center justify-between gap-2 mt-4 p-2 border border-black rounded-lg b">
+      <div className="">
+        <p className="font-bold">{name}</p>
+        <p className="">{number}</p>
       </div>
 
       <button

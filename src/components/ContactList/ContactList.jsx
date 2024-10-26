@@ -22,9 +22,9 @@ const ContactList = () => {
   }, [dispatch]);
 
   return (
-    <ul className={s.container}>
+    <ul className="flex flex-wrap gap-2 list-none">
       {filteredData.map((contact) => (
-        <li className="s.li" key={contact.id}>
+        <li className="w-full" key={contact.id}>
           <Contact
             name={contact.name}
             number={contact.number}

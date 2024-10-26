@@ -8,7 +8,7 @@ const SearchBox = () => {
   const filter = useSelector(selectFilter);
   return (
     <div>
-      <p>Find contacts by name</p>
+      <p>Find by name</p>
       <input
         className="input input-bordered input-sm"
         type="text"
