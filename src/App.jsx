@@ -35,7 +35,7 @@ const App = () => {
     dispatch(refresh());
   }, [dispatch]);
 
-  if (!isRefreshing) {
+  if (isRefreshing) {
     return <div>Loading...</div>;
   }
 
