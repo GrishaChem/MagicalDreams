@@ -33,7 +33,7 @@ const Home = () => {
       </div>
     </div>
   ) : (
-    <p>asd</p>
+    <h1 className="">How to Achieve Your Dreams: A Simple Guide</h1>
   );
 };
 
