@@ -11,48 +11,10 @@ const Header = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
-  const headerRef = useRef(null);
-
-  // Стейт для контролю видимості хедера
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const header = headerRef.current; // Доступ до елемента через реф
-
-    // Функція, яка буде обчислювати процент прокрутки
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY; // Поточна прокрутка в пікселях
-      const documentHeight = document.documentElement.scrollHeight; // Висота всієї сторінки
-      const windowHeight = window.innerHeight; // Висота вікна браузера
-
-      // Відсоток прокрутки сторінки
-      const scrollPercentage =
-        (scrollPosition / (documentHeight - windowHeight)) * 100;
-
-      // Якщо прокручено більше ніж 50% сторінки, приховуємо хедер
-      if (scrollPercentage > 50) {
-        setIsVisible(false); // Змінюємо стейт, щоб хедер зник
-      } else {
-        setIsVisible(true); // Якщо менше 50%, хедер знову з'являється
-      }
-    };
-
-    // Додаємо обробник події прокрутки
-    window.addEventListener("scroll", handleScroll);
-
-    // Очистка при демонтажі компонента
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div
       id="header"
-      ref={headerRef} // Прив'язуємо реф до хедера
-      className={`flex justify-between items-center p-4 bg-gray-800 text-white fixed top-0 w-full left-0 z-10 transition-all ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`flex justify-between items-center p-4 bg-gray-800 text-white fixed top-0 w-full left-0 z-10 transition-all`}
     >
       <NavLink to="/" className="text-xl font-semibold">
         Home
@@ -88,7 +50,7 @@ const Header = () => {
         {isLoggedIn && (
           <button
             onClick={() => dispatch(logout())}
-            className="text-gray-400 hover:text-gray-200"
+            className="hover:text-gray-400 transition"
           >
             Exit
           </button>

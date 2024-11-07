@@ -11,7 +11,7 @@ const Layout = () => {
   const isLoading = useSelector(selectIsLoading);
   const Error = useSelector(selectError);
   return (
-    <div>
+    <div className="pt-16">
       <Header />
       <Outlet />
     </div>
