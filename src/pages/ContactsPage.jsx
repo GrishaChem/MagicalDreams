@@ -11,7 +11,6 @@ const ContactsPage = () => {
 
   return (
     <>
-      <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
       {isLoading && <h2>Loading...</h2>}
